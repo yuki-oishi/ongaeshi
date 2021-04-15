@@ -1,0 +1,78 @@
+.p-area-index {
+  a {
+    transition: 0.3s;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    .p-area-index_item {
+      margin-top: 40px;
+      padding: 40px 20px;
+      position: relative;
+      border: 1px solid $border-light;
+
+      @include mq(medium, max) {
+        padding: 20px;
+      }
+
+      &:after {
+        content: "";
+        background: url("../images/common/icon_green.png") no-repeat;
+        display: inline-block;
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        background-size: contain;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+
+      h3 {
+        font-size: 2.4rem;
+        @include bold;
+        color: $collum-title;
+        line-height: 1.5;
+        width: 90%;
+
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+
+  .c-pagination {
+    margin-top: 40px;
+  }
+
+  &_img {
+    margin: 80px 0 120px;
+    position: relative;
+
+    @include mq(medium, max) {
+      display: none;
+    }
+
+    &-link {
+      display: flex;
+      position: absolute;
+      bottom: 8%;
+      left: 50%;
+      transform: translateX(-50%);
+
+      width: 90%;
+      a + a {
+        margin-left: 20px;
+      }
+
+      a {
+      }
+    }
+  }
+}

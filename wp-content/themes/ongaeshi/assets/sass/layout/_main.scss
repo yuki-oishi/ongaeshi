@@ -1,0 +1,55 @@
+.l-main {
+  // footer上余白
+  @include mq() {
+    margin-bottom: 130px;
+  }
+}
+.p-top {
+  @include mq() {
+    margin-bottom: 130px;
+  }
+}
+.l-row02 {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  @include mq(xlarge, max) {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  @include mq(medium, max) {
+    margin-right: 0;
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+.l-contents {
+  width: 780px;
+  margin-right: 30px;
+  margin-top: 73px;
+
+  @include mq(large, max) {
+    width: auto;
+    max-width: 780px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 20px;
+  }
+
+  @include mq(medium, max) {
+    margin-top: 0;
+    padding: 0;
+  }
+}
+
+.l-sidebar {
+  width: 290px;
+  margin-top: 73px;
+
+  @include mq(large, max) {
+    margin: 73px auto;
+    width: 80%;
+  }
+}

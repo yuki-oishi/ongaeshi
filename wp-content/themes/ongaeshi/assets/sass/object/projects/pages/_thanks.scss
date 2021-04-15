@@ -1,0 +1,27 @@
+.p-thanks {
+    margin-bottom: 1200px;
+
+    @include mq(large, max) {
+        margin-bottom: 100px;
+    }
+    &-txt {
+        margin-top: 40px;
+
+        @include mq(medium, max) {
+            font-size: 1.6rem;
+        }
+    }
+
+    &_btn {
+        width: 350px;
+        margin-top: 80px;
+
+        @include mq(medium, max) {
+            max-width: 90%;
+            margin-top: 50px;
+        }
+        &:after {
+            content: none;
+        }
+    }
+}

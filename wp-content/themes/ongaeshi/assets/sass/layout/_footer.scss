@@ -1,0 +1,16 @@
+.l-footer {
+    &__inner {
+        max-width: 1100px;
+        margin: 0 auto;
+
+        @include mq(xlarge, max) {
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+
+        @include mq(medium, max) {
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+    }
+}

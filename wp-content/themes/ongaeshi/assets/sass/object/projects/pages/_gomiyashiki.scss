@@ -1,0 +1,7 @@
+.p-gomiyashiki {
+    line-height: 2;
+
+    @include mq(medium, max) {
+        margin-bottom: 70px;
+    }
+}

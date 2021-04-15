@@ -1,0 +1,250 @@
+.p-news {
+    &_wrap {
+        margin-top: 54px;
+        padding: 0 15px;
+
+        @include mq(medium, max) {
+            margin-top: 43px;
+        }
+
+        $i: 1;
+        $length: 3;
+        @while $i <= $length {
+            #tab#{$i}:checked {
+                ~ .p-news-tab .tab#{$i}_label {
+                    background: $bg-lightblue;
+                    color: #fff;
+                }
+                ~ .panel_area #panel#{$i} {
+                    display: block;
+                }
+            }
+            $i: $i + 1;
+        }
+
+        .tab_panel {
+            width: 100%;
+            padding: 40px;
+            display: none;
+        }
+    }
+
+    &-tab {
+        display: flex;
+        justify-content: space-between;
+        label {
+            font-size: 2.6rem;
+            @include bold;
+            @include notoserif;
+            width: calc((100% - 50px) / 3);
+            padding: 12px 0;
+            color: #fff;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 20px 20px 0 0;
+            transition: ease 0.2s opacity;
+            background-color: $tab-gray;
+
+            &:hover {
+                opacity: 0.6;
+            }
+            @include mq(large, max) {
+                width: calc((100% - 30px) / 3);
+            }
+            @include mq(medium, max) {
+                font-size: 1.8rem;
+                width: calc((100% - 18px) / 3);
+            }
+
+            @include mq(small, max) {
+                font-size: 1.6rem;
+                line-height: 1.2;
+            }
+
+            &:nth-of-type(3) {
+                display: block;
+                @include mq(medium, max) {
+                    display: none;
+                }
+            }
+            &:nth-of-type(4) {
+                display: none;
+                @include mq(medium, max) {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &-item {
+        border-bottom: 1px solid $border-light;
+
+        @include mq(medium, max) {
+            border-bottom: none;
+        }
+
+        &:not(:nth-of-type(1)) {
+            padding: 20px 0;
+        }
+
+        &:nth-of-type(1) {
+            padding-bottom: 20px;
+        }
+
+        a {
+            display: flex;
+
+            @include mq(medium, max) {
+                display: block;
+            }
+        }
+        &_img {
+            width: 30%;
+            height: 182px;
+            margin-right: 21px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            @include mq(medium, max) {
+                width: 100%;
+                height: 300px;
+            }
+
+            @include mq(small, max) {
+                height: 205px;
+            }
+        }
+
+        &_txt {
+            width: 70%;
+            margin-top: -6px;
+
+            @include mq(medium, max) {
+                width: 100%;
+                margin-top: 20px;
+                padding: 0 15px;
+            }
+
+            time {
+                font-size: 1.4rem;
+                color: #707070;
+                margin-right: 8px;
+
+                @include mq(medium, max) {
+                    margin-top: 20px;
+                }
+            }
+
+            h3 {
+                font-size: 2.4rem;
+                @include bold;
+                color: $collum-title;
+
+                @include mq(medium, max) {
+                    font-size: 1.8rem;
+                    line-height: 1.5;
+                    margin-top: 8px;
+                }
+            }
+            p {
+                font-size: 1.6rem;
+
+                @include mq(medium, max) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &_year_wrap {
+        margin: 40px 0 100px;
+
+        @include mq(medium, max) {
+            margin: 80px 0 50px;
+        }
+        h4 {
+            display: none;
+            @include mq(medium, max) {
+                display: block;
+                width: 100%;
+                background-color: $dark-yellow;
+                text-align: center;
+                color: $blue;
+                font-size: 1.6rem;
+                @include bold;
+                @include notoserif;
+                position: relative;
+                &:after {
+                    position: absolute;
+                    content: "";
+                    display: inline-block;
+                    width: 8px;
+                    height: 8px;
+                    right: 16px;
+                    top: 8px;
+                    border-right: 1px solid $blue;
+                    border-top: 1px solid $blue;
+                    transform: rotate(135deg);
+                }
+            }
+        }
+        ul {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 12px;
+            li {
+                margin-right: 10px;
+                width: 82px;
+                height: 48px;
+                padding-top: 4px;
+                text-align: center;
+                background-color: $bg-lightblue;
+
+                @include mq(medium, max) {
+                    width: 13%;
+                    height: 48px;
+                    padding-top: 0;
+                    margin-right: 0;
+                }
+
+                @include mq(small, max) {
+                    width: calc(100% - 20px / 5);
+                    height: 31px;
+
+                    &:not(:last-of-type) {
+                        margin-right: 5px;
+                    }
+                }
+                a {
+                    color: #fff;
+                    @include notoserif;
+                    font-size: 2.5rem;
+                    @include bold;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+
+                    @include mq(medium, max) {
+                        font-size: 1.8rem;
+                        line-height: 48px;
+                        display: block;
+                    }
+
+                    @include mq(small, max) {
+                        font-size: 1.3rem;
+                        line-height: 31px;
+                    }
+                }
+
+                &:hover {
+                    background-color: $blue;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

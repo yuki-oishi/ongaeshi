@@ -1,0 +1,891 @@
+/*---------------------------------
+common
+---------------------------------*/
+
+/*---------------------------------
+　p-quote
+---------------------------------*/
+.p-quote {
+  &__lists {
+    margin-top: 20px;
+    position: relative;
+    margin: 0 auto;
+    @include mq() {
+      width: 780px;
+      height: 150px;
+      background: url("../images/service/area/irai_pc.png") no-repeat;
+      background-size: contain;
+    }
+    @include mq(medium, max) {
+      width: 100%;
+      height: 400px;
+      background: url("../images/service/area/irai_sp.png") no-repeat;
+      background-size: contain;
+      background-position: center center;
+    }
+  }
+  ul {
+    position: absolute;
+    @include mq() {
+      top: 20px;
+      right: 70px;
+    }
+    @include mq(medium, max) {
+      bottom: 10%;
+      padding: 20px;
+      display: block;
+    }
+    li {
+      font-size: 1.6rem;
+      line-height: 1.8;
+      border-bottom: 2px dotted #989898;
+      @include mq(medium, max) {
+        font-size: 1.4rem;
+        line-height: 3;
+      }
+    }
+  }
+}
+/*---------------------------------
+ p-worries
+---------------------------------*/
+.p-worries {
+  &__box {
+    margin-top: 20px;
+    background: #f7f2e1;
+
+    @include mq() {
+      padding: 20px;
+    }
+    @include mq(medium, max) {
+      padding: 20px 15px 60px;
+    }
+  }
+
+  &__image {
+    padding-bottom: 10px;
+    border-bottom: 4px solid #fff;
+  }
+
+  &__list {
+    padding-top: 20px;
+  }
+}
+/*---------------------------------
+ p-contact|見積もり
+---------------------------------*/
+.p-contact {
+  position: relative;
+  background: $bg-lightblue;
+  padding: 20px;
+  &__hed {
+    display: flex;
+    justify-content: center;
+  }
+  &__hedline {
+    @include mq() {
+      padding-right: 50px;
+      padding-left: 30px;
+    }
+  }
+  &__illust {
+    @include mq() {
+      margin-top: -25%;
+    }
+    @include mq(medium, max) {
+      margin-top: -20%;
+    }
+  }
+  &__wrap {
+    margin-top: 15px;
+    background: #fff;
+    width: 100%;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.3);
+  }
+  &__title {
+    position: relative;
+    color: $blue;
+    text-align: center;
+    @include notoserif;
+    @include bold;
+    @include mq() {
+      font-size: 2.4rem;
+    }
+    @include mq(medium, max) {
+      font-size: 1.4rem;
+      line-height: 1.3;
+    }
+    &:before,
+    &:after {
+      position: absolute;
+      content: "";
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      bottom: 10px;
+    }
+    &:before {
+      border-color: transparent #ca1c40 transparent transparent;
+      transform: rotate(-10deg);
+      border-width: 0 10px 60px 0;
+      @include mq() {
+        left: 20px;
+      }
+      @include mq(medium, max) {
+        top: 10px;
+        left: 0;
+      }
+    }
+    &:after {
+      border-width: 60px 10px 0 0;
+      border-color: #ca1c40 transparent transparent transparent;
+      transform: rotate(10deg);
+      @include mq(medium, max) {
+        right: 20px;
+      }
+      @include mq(medium, max) {
+        top: 10px;
+        right: 0;
+      }
+    }
+  }
+
+  &__links {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    @include mq(medium, max) {
+      flex-direction: column;
+      text-align: center;
+    }
+    a {
+      &:first-child {
+        @include mq() {
+          padding-right: 15px;
+        }
+        @include mq(medium, max) {
+          padding-top: 0px;
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+}
+/*---------------------------------
+ p-recommend
+---------------------------------*/
+
+/*---------------------------------
+ pack-plan
+---------------------------------*/
+.p-packPlan {
+  @include mq() {
+    margin-top: 50px;
+  }
+
+  &__txt {
+    @include mq() {
+      font-size: 2rem;
+    }
+    @include mq(medium, max) {
+      padding: 20px;
+    }
+  }
+  &__blueArea {
+    padding: 20px;
+    margin-top: 0px;
+  }
+}
+/*---------------------------------
+ basePrice
+---------------------------------*/
+.p-basePrice {
+  &__box {
+    border: 5px solid #ca1c40;
+    padding: 24px 20px 20px;
+  }
+  &__cap {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    @include mq(medium, max) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+}
+/*---------------------------------
+ 3resons
+---------------------------------*/
+.p-3reaspns {
+  @include mq(medium, max) {
+    margin-top: 30px;
+  }
+}
+/*---------------------------------
+ p-case
+---------------------------------*/
+.p-case {
+  &__box {
+    border: 3px solid #2a4c80;
+    margin-top: 50px;
+  }
+  &__hedline {
+    @include bold;
+    color: $blue;
+    @include mq() {
+      font-size: 3.2rem;
+    }
+    @include mq(medium, max) {
+      font-size: 2rem;
+    }
+  }
+  &__photos {
+    @include mq() {
+      padding: 25px;
+    }
+    @include mq(medium, max) {
+      padding: 15px;
+    }
+  }
+  &__photo {
+    display: flex;
+    justify-content: center;
+    @include mq() {
+      margin-top: 30px;
+    }
+    &-before {
+      @include mq() {
+        padding-right: 30px;
+      }
+      @include mq(medium, max) {
+        padding-right: 15px;
+      }
+    }
+    figure {
+      @include mq() {
+        margin-top: 20px;
+      }
+      @include mq(medium, max) {
+        margin-top: 10px;
+      }
+    }
+  }
+  // 事例
+  &__table {
+    &--ttl {
+      display: flex;
+      align-items: center;
+      background: $blue;
+      color: #fff;
+      @include mq() {
+        padding: 13px 20px;
+        font-size: 3.2rem;
+        line-height: 1.28;
+        margin-top: 20px;
+      }
+      @include mq(medium, max) {
+        font-size: 2.4rem;
+        padding: 5px 15px;
+      }
+      span {
+        display: inline-block;
+        color: #000;
+        background: #fff;
+        margin-right: 20px;
+        @include bold;
+        @include mq() {
+          font-size: 1.6rem;
+          padding: 5px 8px;
+        }
+        @include mq(medium, max) {
+          font-size: 1.2rem;
+          padding: 3px 7px;
+        }
+      }
+      .p-case__hedline {
+        color: #fff;
+      }
+    }
+    ul {
+      background: $bg-yellow;
+      padding: 10px 20px 20px;
+      li {
+        line-height: 1.2;
+        color: $secondary-black;
+        @include mq() {
+          display: flex;
+          align-items: center;
+          padding-top: 12px;
+          font-size: 1.3rem;
+        }
+        @include mq(medium, max) {
+          padding-top: 8px;
+        }
+      }
+    }
+    .list-tag01,
+    .list-tag02 {
+      display: inline-block;
+      line-height: 15px;
+      text-align: center;
+      color: #fff;
+      padding: 5px 10px;
+      margin-right: 20px;
+      @include mq() {
+        font-size: 1.4rem;
+      }
+      @include mq(medium, max) {
+        font-size: 1.2rem;
+      }
+    }
+    .list-tag01 {
+      background: $blue;
+    }
+    .list-tag02 {
+      background: $tab-gray;
+    }
+    // table-item
+    dl {
+      display: flex;
+      border-top: none;
+      flex-wrap: wrap;
+      border: 1px solid #ccc;
+      &:nth-of-type(1) {
+        border-top: 1px solid #ccc;
+      }
+      @include mq(medium, max) {
+        flex-wrap: nowrap;
+      }
+      dt {
+        background: #ddd;
+        padding: 10px;
+        box-sizing: border-box;
+        @include mq() {
+          width: 30%;
+        }
+      }
+
+      dd {
+        padding: 10px;
+        margin: 0;
+        background: #fff;
+        box-sizing: border-box;
+
+        @include mq() {
+          width: 70%;
+        }
+      }
+      @include mq(medium, max) {
+        dt,
+        dd {
+          width: 100%;
+        }
+      }
+    }
+  }
+  // 価格テキスト
+  &__price {
+    background: $bg-yellow;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    &--txt {
+      color: $red;
+      @include bold;
+      padding-right: 20px;
+      @include mq() {
+        font-size: 2.6rem;
+      }
+      @include mq(medium, max) {
+        font-size: 1.6rem;
+        line-height: 1.2;
+      }
+    }
+    &--number {
+      @include notoserif;
+      color: $red;
+      @include bold;
+      @include mq() {
+        font-size: 8.4rem;
+      }
+      @include mq(medium, max) {
+        font-size: 4.2rem;
+      }
+    }
+    .yen {
+      display: inline-block;
+      width: 70px;
+      color: $red;
+      font-size: 4rem;
+      @include noto;
+      padding-left: 15px;
+      @include mq(medium, max) {
+        font-size: 3rem;
+      }
+    }
+    // ルビ
+    [data-ruby] {
+      position: relative;
+    }
+
+    [data-ruby]::before {
+      content: attr(data-ruby);
+      position: absolute;
+      left: 0;
+      padding-left: 15px;
+      margin: auto;
+      text-align: center;
+      @include mq() {
+        top: -1rem;
+        font-size: 1.4rem;
+      }
+      @include mq(medium, max) {
+        top: -0.5rem;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  // after before　タグ
+  .before-tag,
+  .after-tag {
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    @include mq() {
+      line-height: 30px;
+      font-size: 1.3rem;
+      padding: 2px 10px;
+    }
+    @include mq(medium, max) {
+      font-size: 1rem;
+      line-height: 15px;
+      padding: 2px 5px;
+    }
+  }
+  .before-tag {
+    background: $blue;
+  }
+  .after-tag {
+    background: $red;
+  }
+  //コメント
+  &__cap {
+    margin-top: 25px;
+    @include mq() {
+      padding: 20px;
+    }
+    h4 {
+      background: $bg-gray;
+      text-align: center;
+      font-size: 2rem;
+      padding: 5px;
+    }
+    p {
+      line-height: 2;
+      @include mq() {
+        margin-top: 20px;
+      }
+      @include mq(medium, max) {
+        padding: 15px;
+      }
+    }
+  }
+} //p-case END
+/*---------------------------------
+ p-kaitori
+---------------------------------*/
+.p-kaitori {
+  &__wrap {
+    @include mq(medium, max) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+  &__table {
+    width: 100%;
+    margin-top: 20px;
+    @include mq() {
+      font-size: 2rem;
+    }
+    @include mq(medium, max) {
+      font-size: 1.2rem;
+    }
+    td {
+      background: #fff;
+      border: 1px solid #d6d6d6;
+      @include mq() {
+        padding: 1.5rem;
+      }
+      @include mq(medium, max) {
+        text-align: center;
+      }
+    }
+  }
+  &__price {
+    margin-top: 30px;
+    h3 {
+      @include notoserif;
+      @include bold;
+      text-align: center;
+      color: $blue;
+      border-radius: 10px;
+      border: 2px solid #e1d19a;
+      background: linear-gradient(to bottom, #fdfbdf 0%, #e5d0a0 100%);
+      font-size: 2.5rem;
+      @include mq() {
+        line-height: 60px;
+        height: 60px;
+      }
+      @include mq(medium, max) {
+        line-height: 1.2;
+        padding: 10px;
+      }
+    }
+    table {
+      width: 100%;
+      padding: 16px;
+      margin-top: 20px;
+      background: #fff;
+      border: 2px solid $table-line;
+      box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.16);
+      @include mq() {
+        font-size: 1.6rem;
+      }
+      @include mq(medium, max) {
+        font-size: 1.2rem;
+      }
+      tbody {
+        @include mq() {
+          width: 100%;
+          padding: 10px 15px;
+        }
+      }
+      tr {
+        &:not(:last-child) {
+          border-bottom: 2px dashed $table-line;
+        }
+      }
+      td {
+        vertical-align: middle;
+        @include mq {
+          padding: 20px;
+        }
+        @include mq(medium, max) {
+          padding: 5px;
+        }
+      }
+      .is-price {
+        @include notoserif;
+        color: $red;
+        @include bold;
+      }
+    }
+    &--label {
+      display: inline-block;
+      background-color: $blue;
+      color: #fff;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      @include mq {
+        font-size: 1.2rem;
+      }
+      @include mq(medium, max) {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+/*---------------------------------
+ saiyasu-banner
+---------------------------------*/
+.p-saiyasu {
+  position: relative;
+  @include mq() {
+    margin-top: 80px;
+  }
+  @include mq(medium, max) {
+    margin-top: 50px;
+  }
+  &__img {
+    width: 100%;
+    z-index: -1;
+    @include mq() {
+      height: 440px;
+      background: url("../images/common/saiyasu_pc.png") no-repeat;
+      background-size: contain;
+    }
+    @include mq(medium, max) {
+      height: 580px;
+      background: url("../images/common/saiyasu_sp.png") no-repeat;
+      background-size: contain;
+    }
+  }
+  &__links {
+    @include mq() {
+      position: absolute;
+      bottom: 9%;
+      left: 5%;
+    }
+    @include mq(small, max) {
+      position: absolute;
+      bottom: 5%;
+      left: 8%;
+    }
+    @include mq(xsmall, max) {
+      position: absolute;
+      bottom: 19%;
+      left: 16%;
+      transform: translateX(-10%);
+    }
+  }
+}
+/*---------------------------------
+ 7resons
+---------------------------------*/
+.p-7reasons {
+  &__cards {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    @include mq() {
+      background: linear-gradient(135deg, transparent 15px, $bg-reason 0) top
+          left,
+        /*重なり順番1*/ linear-gradient(-135deg, transparent 15px, $bg-reason 0)
+          top right,
+        /*重なり順番2*/ linear-gradient(-45deg, transparent 15px, $bg-reason 0)
+          bottom right,
+        /*重なり順番3*/ linear-gradient(45deg, transparent 15px, $bg-reason 0)
+          bottom left /*重なり順番4*/;
+      background-size: 50% 50%;
+      background-repeat: no-repeat;
+    }
+    @include mq(medium, max) {
+      flex-wrap: wrap;
+      flex-direction: column;
+      background: $bg-reason;
+    }
+  }
+  .cards-04 {
+    display: block;
+    width: 100%;
+    @include mq() {
+      background: linear-gradient(135deg, transparent 15px, $bg-reason 0) top
+          left,
+        linear-gradient(-135deg, transparent 15px, $bg-reason 0) top right;
+      background-size: 50% 100%;
+      background-repeat: no-repeat;
+    }
+    @include mq(medium, max) {
+      background: $bg-reason;
+    }
+  }
+  &__card {
+    @include mq() {
+      border-top: 6px dotted #fff;
+      padding: 20px;
+      max-width: calc((100% - 50px) / 2);
+    }
+    @include mq(medium, max) {
+      padding: 15px 15px 30px;
+      border-top: 3px dotted #fff;
+    }
+    //  見出し
+    &--title {
+      display: flex;
+      align-items: center;
+      img {
+        width: 40px;
+        margin-right: 1rem;
+        @include mq() {
+          vertical-align: top;
+        }
+      }
+      h3 {
+        color: $light-blue;
+        font-size: 2.4rem;
+        @include bold;
+        line-height: 1.2;
+      }
+    }
+
+    &--txt {
+      .float-r {
+        float: right;
+        margin: 0 0 20px 20px;
+      }
+      @include mq() {
+        font-size: 1.8rem;
+        margin-top: 20px;
+      }
+      @include mq(medium, max) {
+        font-size: 1.6rem;
+        padding-top: 20px;
+      }
+    }
+  }
+  .card01 {
+    @include mq() {
+      border-right: 6px dotted #fff;
+    }
+  }
+  .card-last {
+    @include mq() {
+      padding: 20px 40px 40px;
+      max-width: 100%;
+      border-top: 6px dotted #fff;
+    }
+  }
+}
+/*---------------------------------
+one-step
+---------------------------------*/
+
+/*---------------------------------
+ service
+---------------------------------*/
+.p-service {
+  margin-top: 60px;
+
+  &__title {
+    @include mq() {
+      margin-top: 40px;
+    }
+    @include mq(medium, max) {
+      margin-top: 20px;
+    }
+  }
+  &__lists {
+    display: flex;
+    justify-content: center;
+    background: $dark-yellow;
+    @include mq() {
+      padding: 20px;
+    }
+    @include mq(medium, max) {
+      flex-wrap: wrap;
+      padding: 10px;
+    }
+    li {
+      // background: #fff;
+      // box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
+      @include mq() {
+        width: calc(100% - (20px * 5) / 2);
+
+        &:not(:last-child) {
+          margin-right: 20px;
+        }
+      }
+      @include mq(medium, max) {
+        flex-basis: 50%;
+        padding: 5px;
+      }
+    }
+  }
+}
+.arrow-icon {
+  padding-left: 30px;
+  line-height: 24px;
+  background: url(../images/service/icon@2x.png) no-repeat;
+  vertical-align: bottom;
+}
+
+/*---------------------------------
+ p-flow
+---------------------------------*/
+.p-flow {
+  @include mq() {
+    margin-top: 40px;
+  }
+  @include mq(medium, max) {
+    margin-top: 20px;
+  }
+
+  &__img {
+    @include mq() {
+      margin-top: 40px;
+    }
+    @include mq(medium, max) {
+      margin-top: 20px;
+    }
+  }
+  &__txt {
+    @include mq() {
+      font-size: 2rem;
+    }
+    @include mq(medium, max) {
+      padding: 15px;
+    }
+  }
+}
+/*---------------------------------
+ p-areaMap
+---------------------------------*/
+.p-areaMap {
+  background: $bg-lightblue;
+  @include mq() {
+    margin-top: 80px;
+    padding: 30px 25px 25px;
+  }
+  @include mq(medium, max) {
+    margin-top: 50px;
+    padding: 20px 15px;
+  }
+
+  &__txt {
+    color: #fff;
+    @include mq() {
+      font-size: 1.6rem;
+      margin-top: -20%;
+      max-width: 288px;
+      height: 156px;
+      line-height: 2;
+    }
+    @include mq(medium, max) {
+      font-size: 1.2rem;
+      width: 150px;
+      margin-top: -50%;
+    }
+  }
+  &__title {
+    display: inline-block;
+    color: #fff;
+    @include notoserif;
+    @include bold;
+    text-align: center;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, #5b87bb 0%, #2a4c80 100%);
+    padding: 10px 20px;
+    @include mq(medium, max) {
+      margin-top: 20%;
+    }
+  }
+  &__list {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3);
+    @include mq() {
+      margin-top: -20px;
+    }
+    @include mq(medium, max) {
+      margin-top: -10px;
+    }
+    p {
+      @include mq() {
+        font-size: 1.6rem;
+      }
+      @include mq(medium, max) {
+        font-size: 1.2rem;
+      }
+    }
+  }
+  &__cap {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+}

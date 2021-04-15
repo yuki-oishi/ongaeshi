@@ -1,0 +1,439 @@
+/*-------------------------------
+  p-ihinseiri
+-------------------------------*/
+
+.p-ihinseiri {
+  @include mq(medium, max) {
+    margin-bottom: 70px;
+  }
+  line-height: 2;
+  &-top {
+    &_txt {
+      margin-top: 40px;
+    }
+
+    &_img {
+      width: 45%;
+      margin-right: 0;
+      margin-left: auto;
+      float: right;
+      padding-left: 37px;
+      margin-bottom: 27px;
+      margin-top: 10px;
+
+      @include mq(medium, max) {
+        width: 50%;
+        padding-left: 25px;
+        margin-right: 15px;
+      }
+    }
+
+    p {
+      margin-top: -10px;
+    }
+
+    &_float {
+      overflow: hidden;
+    }
+  }
+  /*--------- p-ihinseiri-card -----------*/
+
+  &-card {
+    &_flex {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 40px;
+      background-color: $bg-yellow;
+      padding: 20px;
+      @include mq() {
+        // 最後の要素左寄せ
+        &:after {
+          content: "";
+          display: block;
+          width: calc(100% / 3 - 20px);
+          height: 0;
+        }
+      }
+    }
+
+    &_item {
+      margin: auto;
+      &-pc {
+        background-color: #fff;
+        border: 3px solid #f0efef;
+        margin: 0 10px 10px 0;
+        @include mq() {
+          width: calc(100% / 3 - 20px);
+          &:nth-of-type(4n) {
+            margin-right: 0;
+          }
+        }
+        @include mq(medium, max) {
+          display: none;
+        }
+
+        &-img {
+          vertical-align: top;
+          width: 100%;
+          height: 240px;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        &-txt {
+          padding: 16px;
+
+          h3 {
+            font-size: 2rem;
+            @include bold;
+            line-height: 1.5;
+            border-bottom: 3px solid #f0efef;
+          }
+
+          p {
+            font-size: 1.5rem;
+            @include mq() {
+              margin-top: 10px;
+            }
+            color: #4d4d4d;
+          }
+        }
+      }
+      /*--------- sp -----------*/
+
+      &-sp {
+        padding: 10px;
+        background-color: #fff;
+        width: 100%;
+        border: 3px solid #f0efef;
+        display: none;
+        @include mq(medium, max) {
+          display: block;
+        }
+
+        &:nth-of-type(n + 3) {
+          margin-top: 10px;
+        }
+
+        h3 {
+          font-size: 1.8rem;
+          @include bold;
+          line-height: 1.5;
+          text-align: center;
+          border-bottom: 3px solid #f0efef;
+        }
+
+        p {
+          color: #4d4d4d;
+        }
+
+        &-txt {
+          margin-top: 10px;
+          clear: both;
+        }
+
+        &-img {
+          width: calc(55% - 10px);
+          height: 220px;
+          float: left;
+          padding-right: 10px;
+          padding-top: 10px;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+
+          @include mq(small, max) {
+            height: 90px;
+          }
+        }
+      }
+    }
+  }
+
+  &-comparison {
+    margin-top: 80px;
+
+    @include mq(medium, max) {
+      margin-top: 50px;
+    }
+
+    &_wrap {
+      margin-top: 20px;
+      @include mq(medium, max) {
+        margin-top: 0;
+        padding: 15px;
+      }
+    }
+
+    &_img {
+      margin-top: 20px;
+    }
+
+    p {
+      margin-top: 20px;
+    }
+
+    &_standard {
+      margin-top: 80px;
+      background-color: #ffffed;
+      border: 5px solid #e5d49d;
+      padding: 20px;
+
+      @include mq(medium, max) {
+        margin-top: 50px;
+      }
+      h3 {
+        @include notoserif;
+        font-size: 3.2rem;
+        @include bold;
+        text-align: center;
+        color: $blue;
+        height: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: url("../images/service/ihinseiri/hedding-bg.png") no-repeat;
+        background-size: 100%;
+
+        @include mq(medium, max) {
+          font-size: 2.5rem;
+
+          background: url("../images/service/ihinseiri/hedding-bg_sp.png")
+            no-repeat;
+          line-height: 1.4;
+          background-size: 100% 100%;
+          height: 90px;
+        }
+
+        br {
+          display: none;
+          @include mq(medium, max) {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  &-service {
+    margin-top: 80px;
+
+    @include mq(medium, max) {
+      margin-top: 50px;
+    }
+
+    &_wrap {
+      background-color: #f7f3e0;
+      padding: 0 35px 30px;
+    }
+
+    &_item {
+      border: 4px solid #ca1c40;
+      background-color: #fff;
+      box-shadow: 5px 5px 0px rgba($color: #000000, $alpha: 0.2);
+      padding: 20px 30px;
+      line-height: 1.5;
+
+      @include mq(medium, max) {
+        padding: 15px;
+      }
+
+      &01 {
+        h3 {
+          background: url("../images/point/point1_pc.png") no-repeat;
+
+          @include mq(medium, max) {
+            background: url("../images/point/point1_sp.png") no-repeat;
+          }
+        }
+      }
+      &02 {
+        margin-top: 20px;
+        h3 {
+          background: url("../images/point/point2_pc.png") no-repeat;
+
+          @include mq(medium, max) {
+            background: url("../images/point/point2_sp.png") no-repeat;
+          }
+        }
+      }
+      &03 {
+        margin-top: 20px;
+        h3 {
+          background: url("../images/point/point3_pc.png") no-repeat;
+
+          @include mq(medium, max) {
+            background: url("../images/point/point3_sp.png") no-repeat;
+          }
+        }
+      }
+      &04 {
+        margin-top: 20px;
+        h3 {
+          background: url("../images/point/point4_pc.png") no-repeat;
+
+          @include mq(medium, max) {
+            background: url("../images/point/point4_sp.png") no-repeat;
+          }
+        }
+      }
+      &05 {
+        margin-top: 20px;
+        h3 {
+          background: url("../images/point/point5_pc.png") no-repeat;
+
+          @include mq(medium, max) {
+            background: url("../images/point/point5_sp.png") no-repeat;
+          }
+        }
+      }
+      &-wrap {
+        display: flex;
+
+        @include mq(medium, max) {
+          flex-direction: column-reverse;
+        }
+      }
+
+      h3 {
+        height: 85px;
+        background-size: 100%;
+        color: #fff;
+        margin-left: -30px;
+        padding-left: 80px;
+        @include bold;
+        display: flex;
+        position: relative;
+        z-index: 2;
+        align-items: center;
+        font-size: 2.4rem;
+        @include notoserif;
+        line-height: 1;
+
+        @include mq(medium, max) {
+          height: 57px;
+          background-size: contain;
+          padding-left: 50px;
+          font-size: 1.8rem;
+          margin-left: -15px;
+          padding-right: 10px;
+        }
+
+        br {
+          display: none;
+          @include mq(medium, max) {
+            display: block;
+          }
+        }
+      }
+
+      p {
+        display: block;
+        width: 60%;
+        @include mq() {
+          margin-right: 16px;
+        }
+        @include mq(medium, max) {
+          width: 100%;
+          margin-top: 10px;
+        }
+      }
+
+      &-img {
+        width: 40%;
+        padding-top: 10px;
+
+        @include mq(medium, max) {
+          width: 100%;
+          padding-top: 0;
+          margin-top: -10px;
+        }
+      }
+    }
+  }
+
+  &_btn {
+    width: 342px;
+    margin-top: 20px;
+  }
+
+  &-flow {
+    margin-top: 40px;
+
+    @include mq(medium, max) {
+      margin-top: 20px;
+    }
+  }
+
+  &__box {
+    margin-top: 80px;
+
+    @include mq(medium, max) {
+      margin-top: 50px;
+    }
+  }
+
+  &__list {
+    @include bold;
+
+    li {
+      &::before {
+        top: 21px;
+
+        @include mq(medium, max) {
+          top: 3px;
+        }
+      }
+    }
+  }
+
+  &_des {
+    margin-top: 40px;
+
+    @include mq(medium, max) {
+      margin-top: 20px;
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+    &-img {
+      width: 50%;
+      padding-left: 25px;
+      margin-top: 10px;
+      margin-right: 0;
+      margin-left: auto;
+      float: right;
+    }
+
+    span {
+      @include bold;
+    }
+  }
+
+  &_services {
+    margin-top: 80px;
+    @include mq(medium, max) {
+      margin-top: 50px;
+    }
+    h2 {
+      text-align: center;
+      justify-content: center;
+
+      @include mq(medium, max) {
+        text-align: left;
+      }
+      br {
+        @include mq(medium, max) {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+// lower
+.c-lower-mv {
+  background: url("../images/common/header/page-top_bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  height: 250px;
+  width: 100vw;
+  @include mq(xlarge, max) {
+    background-position: right;
+  }
+
+  @include mq(medium, max) {
+    margin-top: 80px;
+    background: url("../images/common/header/page-top_bg-sp.jpg") no-repeat;
+    height: 150px;
+    background-size: cover;
+  }
+
+  @include mq(small, max) {
+    background-position: right;
+  }
+
+  &__title {
+    img {
+      height: 141px;
+      width: auto;
+      object-fit: contain;
+      margin-top: 20px;
+      margin-left: -37px;
+
+      @include mq(medium, max) {
+        height: 60px;
+        margin-left: -10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@charset "UTF-8";
+/* どのファイルを変更すればいいかわからないからこちらでCSSを上書きする */
+@media (min-width: 1100px) {
+.trim {
+    overflow: hidden !important;
+    width: 100% !important;
+	height: 41vw !important;
+    min-height: 700px !important;
+    position: relative !important;
+}
+
+.trim > img {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  -webkit-transform: translate(-50%, -50%) !important;
+  -ms-transform: translate(-50%, -50%) !important;
+  transform: translate(-50%, -50%) !important;
+  width: auto !important;
+  height: 100% !important;
+}
+}
+/* サファリで回り込みがうまくいかない修正 */
+@media (min-width: 981px) {
+.alignright {
+  width: 300px !important;
+  height: auto;
+  float: right;
+  margin: 0 0 20px 20px;
+  display: inline;
+}
+
+.alignleft {
+  width: 300px !important;
+  height: auto;
+  float: left;
+  margin: 20px 20px 0 0;
+  display: inline;
+}
+}
+.p-header-nav_pc .menu-second {
+
+  
+ 
+}
+
+.p-header-nav_pc .menu-second li {
+  white-space: nowrap;
+}

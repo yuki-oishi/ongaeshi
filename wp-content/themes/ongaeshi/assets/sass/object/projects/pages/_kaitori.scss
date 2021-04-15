@@ -1,0 +1,194 @@
+.p-kaitori {
+    line-height: 2;
+
+    @include mq(medium, max) {
+        margin-bottom: 70px;
+    }
+
+    &-point {
+        margin-top: 80px;
+        background-color: #fcf8ea;
+        border: 5px solid #e5d49a;
+        border-radius: 20px;
+        padding: 20px;
+
+        @include mq(medium, max) {
+            padding: 15px;
+            margin-top: 50px;
+            margin-right: 15px;
+            margin-left: 15px;
+        }
+
+        p {
+            margin-top: 20px;
+        }
+
+        &_ttl {
+            display: flex;
+            align-items: center;
+            @include mq(medium, max) {
+                display: block;
+            }
+            span {
+                background-color: #ca1c40;
+                color: #fff;
+                width: 114px;
+                height: 23px;
+                font-size: 1.4rem;
+                text-align: center;
+                margin-right: 20px;
+                line-height: 23px;
+            }
+
+            h3 {
+                font-size: 3.2rem;
+                @include bold;
+                @include notoserif;
+                color: $blue;
+                @include mq(medium, max) {
+                    font-size: 2.4rem;
+                }
+            }
+        }
+    }
+
+    &-flow {
+        margin-top: 80px;
+        @include mq(medium, max) {
+            margin-top: 50px;
+        }
+
+        &_wrap {
+            margin-top: 40px;
+        }
+
+        &_item {
+            background-color: #f7f2e1;
+            padding: 20px;
+
+            @include mq(medium, max) {
+                padding: 15px;
+            }
+
+            &:not(:last-of-type) {
+                margin-bottom: 33px;
+                position: relative;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 95%;
+                    left: 50%;
+                    transform: translate(-50%, 0%);
+                    border: 70px solid transparent;
+                    border-top: 35px solid $yellow;
+
+                    @include mq(medium, max) {
+                        top: 95.8%;
+                        border: 50px solid transparent;
+                        border-top: 25px solid $yellow;
+                    }
+                }
+            }
+
+            h4 {
+                color: $blue;
+                @include bold;
+                @include notoserif;
+                font-size: 3.2rem;
+
+                @include mq(medium, max) {
+                    font-size: 2.4rem;
+                }
+
+                &::before {
+                    @include notoserif;
+                    @include bold;
+                    width: 55px;
+                    height: 55px;
+                    text-align: center;
+                    line-height: 55px;
+                    background-color: #fff;
+                    border: 5px solid $blue;
+                    display: inline-block;
+                    margin-right: 24px;
+
+                    @include mq(medium, max) {
+                        width: 40px;
+                        height: 40px;
+                        line-height: 40px;
+                    }
+                }
+            }
+
+            &:nth-of-type(1) {
+                h4 {
+                    &::before {
+                        content: "1";
+                    }
+                }
+            }
+            &:nth-of-type(2) {
+                h4 {
+                    &::before {
+                        content: "2";
+                    }
+                }
+            }
+            &:nth-of-type(3) {
+                h4 {
+                    &::before {
+                        content: "3";
+                    }
+                }
+            }
+            &:nth-of-type(4) {
+                h4 {
+                    &::before {
+                        content: "4";
+                    }
+                }
+            }
+
+            &-wrap {
+                background-color: #fff;
+                padding: 20px;
+                display: flex;
+                flex-direction: row-reverse;
+                margin-top: 20px;
+
+                @media screen and (max-width: 500px) {
+                    display: block;
+                    padding: 10px;
+                    margin-top: 10px;
+                }
+            }
+
+            &-img {
+                width: 45%;
+                margin-left: 20px;
+
+                @media screen and (max-width: 500px) {
+                    width: 40%;
+                    float: right;
+                    margin-top: 10px;
+                    margin-left: 11px;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            p {
+                width: 55%;
+
+                @media screen and (max-width: 500px) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

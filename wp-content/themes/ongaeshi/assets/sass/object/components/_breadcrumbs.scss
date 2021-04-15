@@ -1,0 +1,42 @@
+// breadcrumbs
+
+.c-breadcrumbs {
+    display: flex;
+    padding-top: 14px;
+
+    @include mq(medium, max) {
+        padding-left: 10px;
+        padding-top: 5px;
+    }
+    a {
+        color: #fff;
+        font-size: 1.6rem;
+        @include bold;
+        letter-spacing: 1px;
+        &::after {
+            content: "";
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            margin-left: 8px;
+            margin-right: 12px;
+            border-right: 1px solid #fff;
+            border-top: 1px solid #fff;
+            transform: rotate(45deg);
+        }
+
+        @include mq(medium, max) {
+            font-size: 8px;
+        }
+    }
+
+    span {
+        color: #fff;
+        font-size: 1.6rem;
+        @include bold;
+        letter-spacing: 1px;
+        @include mq(medium, max) {
+            font-size: 8px;
+        }
+    }
+}

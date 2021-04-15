@@ -1,0 +1,132 @@
+/*---------------------------------
+common
+---------------------------------*/
+#service {
+
+    section {
+        @include mq() {
+            &:nth-of-type(n+2){
+                margin-top: 80px;
+            }
+
+        }
+        @include mq(medium,max){
+            margin-top: 50px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+    }
+
+
+
+}
+/*--------- article -----------*/
+
+.p-article {
+    border: 1px solid #F0EFEF;
+
+    @include mq() {
+        margin-top: 80px;
+    }
+
+    @include mq(medium, max) {
+        margin-top: 40px;
+    }
+   .small {
+       color: $blue;
+       @include mq() {
+           font-size: 2.4rem;
+       }
+        @include mq(medium, max){
+            font-size: 2rem;
+        }
+   }
+   &__float {
+       margin-top: 20px;
+       @include mq() {
+           padding: 20px;
+       }
+
+       figure {
+          float: right;
+          width: 45%;
+          margin: 0 0 20px 20px;
+       }
+   }
+   &__txt {
+
+       @include mq(medium, max) {
+           padding:0 16px 0 16px;
+       }
+       p {
+           line-height: 2;
+
+           @include mq() {
+               font-size: 1.8rem;
+            &:not(:first-child){
+                margin-top: 30px;
+            }
+           }
+
+           @include mq(medium, max) {
+               font-size: 1.6rem;
+               &:not(:first-child) {
+                   margin-top: 16px;
+               }
+           }
+       }
+   }
+/*--------- c-btn -----------*/
+    .c-btn {
+        width: 100%;
+        background: $bg-yellow;
+         margin-top: 30px;
+
+        @include mq () {
+            padding: 30px;
+        }
+        @include mq(medium,max){
+            padding: 30px 25px;
+        }
+    }
+
+}
+/*---------------------------------
+p-servise__article
+---------------------------------*/
+
+/*---------------------------------
+p-komikomi
+---------------------------------*/
+.p-komikomi {
+    &__box {
+        background: $bg-yellow;
+        border:5px solid $dark-yellow;
+
+        @include mq() {
+            margin-top: 40px;
+             padding: 20px;
+        }
+         @include mq(medium, max) {
+             margin-top: 20px;
+             padding: 16px;
+         }
+    }
+    &__img {
+        margin-top: 20px;
+    }
+    .c-btn {
+        @include mq() {
+            margin-top: 40px;
+        }
+    }
+}
+
+/*---------------------------------
+p-sort
+---------------------------------*/
+
+/*---------------------------------
+p-option
+---------------------------------*/

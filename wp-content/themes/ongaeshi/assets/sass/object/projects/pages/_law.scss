@@ -1,0 +1,98 @@
+.p-law {
+  dl {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    border: 1px solid #dddddd;
+    margin-bottom: 100px;
+    font-size: 2rem;
+
+    @include mq(medium, max) {
+      margin: 20px 20px 50px;
+      display: block;
+      width: calc(100% - 40px);
+      font-size: 1.6rem;
+    }
+
+    dt {
+      width: 30%;
+      max-width: 240px;
+      background-color: #f5f5f5;
+      @include bold;
+      padding: 20px;
+      border-right: 1px solid $law-border;
+      display: flex;
+      align-items: center;
+      &:not(:last-of-type) {
+        border-bottom: 1px solid $law-border;
+      }
+
+      @include mq(medium, max) {
+        width: 100%;
+        max-width: 100%;
+        border-right: none;
+      }
+
+      br {
+        @include mq(medium, max) {
+          display: none;
+        }
+      }
+    }
+
+    dd {
+      width: 70%;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid $law-border;
+
+      @include mq(medium, max) {
+        width: 100%;
+      }
+
+      &:nth-of-type(3) {
+        &::before {
+          content: "";
+          display: inline-block;
+          background: url("../images/common/header/call@2x_pc.png") no-repeat;
+          width: 30px;
+          height: 20px;
+          margin-right: 16px;
+          background-size: contain;
+
+          @include mq(medium, max) {
+            margin-right: 8px;
+          }
+        }
+      }
+
+      &:nth-of-type(6) {
+        display: block;
+      }
+      &:last-of-type {
+        display: block;
+        border-bottom: none;
+      }
+
+      a {
+        @include bold;
+        color: $collum-title;
+        border-bottom: 1px solid $collum-title;
+      }
+
+      ul {
+        li {
+          list-style: inside;
+          &:not(:last-of-type) {
+            margin-bottom: 30px;
+
+            @include mq(medium, max) {
+              margin-bottom: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

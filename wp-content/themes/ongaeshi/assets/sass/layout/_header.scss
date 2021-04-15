@@ -1,0 +1,18 @@
+// l-header
+
+.l-header {
+    max-width: 1100px;
+    margin: 0 auto;
+    height: 120px;
+
+    @include mq(xlarge, max) {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    @include mq(medium, max) {
+        height: 60px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+}

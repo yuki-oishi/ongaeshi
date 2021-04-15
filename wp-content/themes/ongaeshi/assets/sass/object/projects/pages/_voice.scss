@@ -1,0 +1,229 @@
+.p-voice-row02 {
+  display: flex;
+  flex-wrap: wrap;
+  @include mq(medium, max) {
+    padding: 0 16px;
+  }
+  &--detail {
+    @include mq {
+      margin-top: 40px;
+    }
+  }
+}
+.p-voice-sec {
+  @include mq {
+    width: calc(50% - 12px);
+  }
+  &:nth-of-type(odd) {
+    @include mq {
+      margin-right: 24px;
+    }
+  }
+  &:nth-of-type(n + 3) {
+    @include mq {
+      margin-top: 24px;
+    }
+  }
+  &:nth-of-type(1) {
+    @include mq(medium, max) {
+      margin-top: 24px;
+    }
+  }
+  &:not(:nth-of-type(1)) {
+    @include mq(medium, max) {
+      margin-top: 20px;
+    }
+  }
+  &--detail {
+    border: 3px solid $blue;
+    @include mq {
+      width: 100%;
+    }
+  }
+  &__detail-wrap {
+    @include mq {
+      padding: 40px;
+    }
+    @include mq(medium, max) {
+      padding: 16px;
+    }
+  }
+  &__title {
+    @include notoserif;
+    background-color: $blue;
+    color: $reverse-color;
+    font-size: 2.2rem;
+    padding: 16px 24px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+  }
+  &__box {
+    border: 3px solid $blue;
+    @include mq {
+      padding: 16px 24px;
+    }
+    @include mq(medium, max) {
+      padding: 16px;
+    }
+    img {
+      float: left;
+      width: 160px;
+      margin-right: 24px;
+    }
+  }
+  &__area {
+    time {
+      color: $tab-gray;
+      font-size: 1.2rem;
+    }
+    p {
+      margin-bottom: 24px;
+    }
+  }
+  &__linkto {
+    font-size: 1.6rem;
+    @include bold;
+    text-align: right;
+    @include notoserif;
+    display: block;
+    width: max-content;
+    margin-right: 0;
+    margin-left: auto;
+    padding-right: 30px;
+    position: relative;
+
+    &:after {
+      content: "";
+      background: url("../images/common/icon_green.png");
+      background-size: cover;
+      width: 18px;
+      height: 18px;
+      position: absolute;
+      right: 0;
+      top: 5px;
+      display: inline-block;
+    }
+  }
+}
+.p-voice-detail {
+  &::after {
+    @include box;
+  }
+  img {
+    @include mq {
+      float: left;
+      width: 450px;
+      object-fit: cover;
+      margin-right: 24px;
+    }
+    @include mq(medium, max) {
+      margin-bottom: 24px;
+    }
+  }
+}
+.p-voice-service {
+  margin-top: 40px;
+  &__cat {
+    display: table;
+    background-color: $color-gray;
+    font-size: 1.2rem;
+    padding: 8px;
+  }
+  &__title {
+    font-size: 2rem;
+    margin-top: 24px;
+  }
+  &__row02 {
+    display: flex;
+    margin-top: 40px;
+    @include mq(medium, max) {
+      flex-wrap: wrap;
+    }
+  }
+  &__box {
+    @include mq {
+      width: calc(50% - 12px);
+    }
+    &:nth-of-type(1) {
+      @include mq {
+        margin-right: 24px;
+      }
+      @include mq(medium, max) {
+        margin-bottom: 24px;
+      }
+    }
+    img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+    }
+    span {
+      @include bold;
+      font-size: 1.2rem;
+      padding: 8px 16px;
+      color: $reverse-color;
+      margin-bottom: 20px;
+      display: table;
+      @include mq(medium, max) {
+        margin-bottom: 16px;
+      }
+    }
+    &--before {
+      background-color: $blue;
+    }
+    &--after {
+      background-color: $red;
+    }
+  }
+  &__text {
+    margin-top: 24px;
+  }
+}
+.p-voice-pagenate {
+  margin-top: 40px;
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: center;
+  a {
+    padding: 8px 16px;
+    color: $blue;
+    @include bold;
+    @include mq(medium, max) {
+      font-size: 1rem;
+      padding: 4px;
+      vertical-align: center;
+    }
+  }
+  &__center {
+    margin: 0 40px;
+    border: 1px solid $blue;
+    @include mq(medium, max) {
+      margin: 0 16px;
+    }
+  }
+  &__before {
+    &::before {
+      @include box;
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 7.5px 15px 7.5px 0;
+      border-color: transparent $blue transparent transparent;
+      margin-right: 8px;
+    }
+  }
+  &__after {
+    &::after {
+      @include box;
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 7.5px 0 7.5px 15px;
+      border-color: transparent transparent transparent $blue;
+      margin-left: 8px;
+    }
+  }
+}

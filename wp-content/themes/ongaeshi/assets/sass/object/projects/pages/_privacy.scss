@@ -1,0 +1,72 @@
+.p-privacy {
+    line-height: 2;
+    margin-bottom: 100px;
+
+    @include mq(medium, max) {
+        margin-top: 20px;
+        padding: 0 20px;
+        margin-bottom: 50px;
+    }
+
+    &-item {
+        .c-gray-hedding {
+            margin-top: 80px;
+            padding: 16px 24px;
+
+            @include mq(medium, max) {
+                margin-top: 50px;
+            }
+            h3 {
+                @include notoserif;
+                color: $blue;
+                font-size: 3.2rem;
+                line-height: 1.5;
+
+                @include mq(medium, max) {
+                    font-size: 2.4rem;
+                }
+            }
+        }
+
+        p {
+            margin-top: 20px;
+        }
+
+        ul {
+            margin-top: 20px;
+            li {
+                position: relative;
+                margin-left: 40px;
+                &::before {
+                    content: "・";
+                    position: absolute;
+                    left: -20px;
+                }
+            }
+        }
+
+        &_small {
+            padding: 0 14px;
+            h4 {
+                margin-top: 20px;
+                font-size: 2.5rem;
+                color: $blue;
+                padding-left: 16px;
+                border-left: 6px solid $blue;
+                line-height: 1;
+                @include bold;
+                @include notoserif;
+
+                @include mq(medium, max) {
+                    font-size: 2.2rem;
+                }
+            }
+        }
+
+        a {
+            color: $collum-title;
+            @include bold;
+            border-bottom: 1px solid $collum-title;
+        }
+    }
+}

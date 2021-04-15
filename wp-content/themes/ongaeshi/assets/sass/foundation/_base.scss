@@ -1,0 +1,36 @@
+* {
+    color: $default-color;
+    font-size: 1.8rem;
+
+    @include mq(medium, max) {
+        font-size: 1.5rem;
+        line-height: 2;
+    }
+}
+
+a {
+    @include hover-delay;
+    &:hover {
+        @include hover;
+    }
+}
+a {
+    img {
+        @include hover-delay;
+        &:hover {
+            @include hover;
+        }
+    }
+}
+
+li {
+    list-style: none;
+}
+// material-icon
+// IE11
+body {
+    text-rendering: optimizeLegibility;
+    font-kerning: normal;
+    font-variant-ligatures: common-ligatures contextual;
+    font-feature-settings: "kern", "liga", "clig", "calt";
+}

@@ -1,0 +1,191 @@
+
+/*-------------------------------
+common
+-------------------------------*/
+#seizen-seiri {
+
+    section {
+        &:nth-of-type(n+2){
+            @include mq() {
+                margin-top: 80px;
+            }
+            @include mq(medium,max){
+                margin-top: 50px;
+            }
+        }
+    }
+}
+
+
+
+/*-------------------------------
+p-seizen
+-------------------------------*/
+.p-seizen {
+
+    p {
+        line-height: 2;
+    }
+    &__txtBoxs {
+        @include mq() {
+            margin-top: 40px;
+        }
+
+        @include mq(medium, max) {
+            margin-top: 20px;
+            padding: 0 16px 0 16px;
+        }
+    }
+    &__img{
+        float: right;
+        @include mq() {
+            max-width: 300px;
+            margin: 0 0 30px 30px;
+
+        }
+         @include mq(medium, max) {
+          width: 50%;
+           margin: 0 0 20px 20px;
+         }
+    }
+
+}
+
+/*-------------------------------
+p-seizenPrice
+-------------------------------*/
+.p-seizenPrice {
+
+    /*---------- table ----------*/
+
+    &__list{
+        @include mq() {
+            margin-top: 40px;
+        }
+        @include mq(){
+            margin-top: 20px;
+        }
+        @include mq(small, max) {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+    }
+
+    table {
+        width: 100%;
+        text-align: center;
+
+        @include mq() {
+            font-size: 1.6rem;
+        }
+
+
+    }
+
+    td,
+    th {
+        border: 1px solid #D6D6D6;
+        text-align: center;
+        vertical-align: middle;
+        @include mq() {
+            font-size: 1.8rem;
+            padding: 20px 15px;
+        }
+        @include mq(medium, max) {
+           padding: 10px 5px;
+           font-size: 1.6rem;
+        }
+    // 費用
+        &:nth-of-type(4) {
+            background: $bg-yellow;
+            @include notoserif;
+            @include bold;
+            color: $red;
+
+            @include mq() {
+                border: 6px solid $red;
+                font-size: 2.6rem;
+            }
+
+            @include mq(medium, max) {
+                font-size: 1.8rem;
+                border: 3px solid $red;
+            }
+        }
+
+        // 改行しない
+        &:nth-of-type(n+5) {
+            white-space: nowrap;
+        }
+    }
+
+    // 見出し
+    th {
+        background: #EDEDED;
+        @include bold;
+
+        @include mq() {
+            font-size: 2.4rem;
+        }
+        //費用
+        &:nth-child(4) {
+            background-color: $red;
+            color: #fff;
+
+            @include mq() {
+                font-size: 2.5rem;
+
+            }
+        }
+
+    }
+}
+　　//円
+    .list-small {
+        color: $red;
+        padding-left: 1rem;
+        @include mq() {
+            font-size: 1.6rem;
+        }
+        @include mq(medium,max) {
+            font-size: 1.2rem;
+        }
+    }
+
+/*-------------------------------
+p-seizen__merit
+-------------------------------*/
+.p-seizen__merit {
+
+    /*---------- 余白 ----------*/
+    &--flex {
+      @include mq() {
+          margin-top: 40px;
+      }
+      @include mq(medium,max){
+          margin-top: 20px;
+      }
+       display: flex;
+       justify-content: space-between;
+    }
+    &--lists {
+        dt {
+            @include mq() {
+                margin-top: 50px;
+            }
+            @include mq(medium,max){
+                margin-top: 30px;
+            }
+        }
+        dd {
+            margin-top: 20px;
+        }
+    }
+
+    &--flex,
+    &--lists {
+        @include mq(medium, max) {
+            padding: 0 16px 0 16px;
+        }
+    }
+}

@@ -1,0 +1,112 @@
+//mq
+$mq-breakpoints: (
+    "xsmall": 320px,
+    "small": 600px,
+    "medium": 768px,
+    "large": 1024px,
+    "xlarge": 1280px,
+);
+@mixin mq($breakpoint: medium, $rule: min, $subtraction: false) {
+    $breakpoint: map_get($mq-breakpoints, $breakpoint);
+    @if $rule == max and $subtraction {
+        $breakpoint: $mq-breakpoints - 1px;
+    }
+    @media screen and (#{$rule}-width: $breakpoint) {
+        @content;
+    }
+}
+
+//mixin
+@mixin text-none {
+    // background-image : url("image/置き換えたい画像.png");
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@mixin box {
+    display: block;
+    content: "";
+}
+
+@mixin auto {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@mixin centering($direction) {
+    position: absolute;
+    @if $direction==xy {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    } @else if $direction==x {
+        left: 50%;
+        transform: translateX(-50%);
+    } @else if $direction==y {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+//font-weight
+@mixin bold {
+    font-weight: 700;
+}
+
+@mixin middle {
+    font-weight: 700;
+}
+
+//line-height
+@mixin default-height {
+    line-height: 1;
+}
+
+// width
+@mixin sp-inner($direction) {
+    @if $direction==p {
+        padding-right: 10px;
+        padding-left: 10px;
+    } @else if $direction==m {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+}
+@mixin pc-inner($direction) {
+    @if $direction==p {
+        padding-right: 20px;
+        padding-left: 20px;
+    } @else if $direction==m {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+}
+@mixin pc-inner-width {
+    width: 1200px;
+    @include auto;
+}
+
+//hover-delay
+@mixin hover-delay {
+    transition: 0.3s;
+}
+
+// hover
+@mixin hover {
+    opacity: 0.7;
+}
+// box-shadow
+@mixin box-shadow($h: 0px, $v: 3px, $b: 7px, $s: 0px, $c: rgba(0, 0, 0, 0.16)) {
+    -webkit-box-shadow: $h $v $b $s $c;
+    -moz-box-shadow: $h $v $b $s $c;
+    box-shadow: $h $v $b $s $c;
+}
+//clear-fix
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}

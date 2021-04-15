@@ -1,0 +1,73 @@
+.p-reason {
+
+    line-height: 2;
+    @include mq(medium, max) {
+        margin-bottom: 70px;
+    }
+
+    &-card {
+        &_wrap {
+            display: block;
+
+            &-last {
+                display: flex;
+                flex-direction: row-reverse;
+
+                @include mq(medium, max) {
+                    display: block;
+                }
+
+                p {
+                    width: 80%;
+                    padding-right: 20px;
+
+                    @include mq(medium, max) {
+                        width: 100%;
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+
+        &_img {
+            margin: 0;
+            margin-left: auto;
+            float: right;
+
+            &-last {
+                margin: 0;
+                margin-left: auto;
+                float: right;
+            }
+        }
+
+        p {
+            float: right;
+            width: 100%;
+        }
+    }
+
+    &_link {
+        @include mq(medium, max) {
+            max-width: 350px;
+            margin: 50px auto 0;
+        }
+        &-btn {
+            width: 90%;
+        }
+    }
+}
+
+.p-7reasons__card--txt.card-last__txt.p-reason-card_wrap-last {
+    display: block;
+}
+
+.p-contact__links.p-saiyasu__links.p-reason_link-btn {
+    // bottom: 15.5%;
+
+    @include mq(medium, max) {
+        position: absolute;
+        bottom: 60px;
+        left: 19px;
+    }
+}

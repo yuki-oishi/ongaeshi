@@ -1,0 +1,25 @@
+// font
+
+// noto
+@mixin noto {
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+@mixin notoserif {
+    font-family: "Noto Serif JP", serif;
+}
+
+* {
+    @include noto;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing:0.8px;
+    @include mq(small,max){
+       line-height: 2;
+    }
+}
+
+body {
+    @include noto;
+    color:$main-black;
+}

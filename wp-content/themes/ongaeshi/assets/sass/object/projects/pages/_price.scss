@@ -1,0 +1,338 @@
+/*-------------------------------
+  common
+-------------------------------*/
+#price {
+  section {
+    &:nth-of-type(n + 2) {
+      @include mq {
+        margin-top: 80px;
+      }
+
+      @include mq(medium, max) {
+        margin-top: 50px;
+      }
+    }
+  }
+}
+/*---------- テキスト ----------*/
+.c-roomPrice,
+.c-payment__txt,
+.c-optionPrice__txt {
+  line-height: 2;
+  @include mq() {
+    font-size: 1.8rem;
+  }
+  @include mq(medium, max) {
+    font-size: 1.6rem;
+  }
+}
+
+/*-------------------------------
+ c-roomPrice
+-------------------------------*/
+.c-roomPrice {
+  &__txt-box {
+    @include mq(small, max) {
+      padding-left: 16px;
+      padding-right: 16px;
+      h3 {
+        margin-top: 20px;
+      }
+    }
+  }
+  /*---------- table ----------*/
+
+  &__list {
+    @include mq(small, max) {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+  table {
+    margin-top: 40px;
+    width: 100%;
+    text-align: center;
+    @include mq() {
+      font-size: 1.6rem;
+    }
+  }
+
+  td,
+  th {
+    text-align: center;
+    vertical-align: middle;
+    @include bold;
+    border: 1px solid #d6d6d6;
+    @include mq() {
+      padding: 5px;
+    }
+    // 費用
+    &:nth-of-type(3) {
+      background: $bg-yellow;
+      @include notoserif;
+      @include bold;
+      color: $red;
+      @include mq() {
+        border: 6px solid $red;
+        font-size: 2.8rem;
+      }
+      @include mq(medium, max) {
+        border: 3px solid $red;
+        font-size: 1.6rem;
+      }
+    }
+    // 改行しない
+    &:nth-of-type(n + 4) {
+      white-space: nowrap;
+    }
+  }
+  // 見出し
+  th {
+    background: #ededed;
+    @include bold;
+    @include mq() {
+      padding: 20px 15px;
+      font-size: 2.4rem;
+    }
+    &:nth-child(3) {
+      background-color: $red;
+      color: #fff;
+
+      @include mq() {
+        font-size: 2.5rem;
+      }
+    }
+  }
+  .list-small {
+    color: $red;
+    padding-left: 1rem;
+    @include mq() {
+      font-size: 1.6rem;
+    }
+    @include mq(medium, max) {
+      font-size: 1.4rem;
+    }
+  }
+  .list-bold {
+    @include bold;
+    @include mq() {
+      font-size: 2.4rem;
+    }
+  }
+
+  /*---------- img ----------*/
+  &__img {
+    @include mq {
+      margin-top: 80px;
+    }
+
+    @include mq(medium, max) {
+      margin-top: 40px;
+      padding: 16px;
+    }
+    figure {
+      position: relative;
+      border: 5px solid $red;
+      background-color: $bg-yellow;
+      margin: 3rem 0 2rem;
+      padding: 1.6rem 1.6rem 0.6rem;
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: 1;
+        border: 20px solid transparent;
+        border-bottom: 26px solid $red;
+        border-top: 0;
+        top: -28px;
+        right: 62px;
+      }
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: 2;
+        border: 20px solid transparent;
+        border-bottom: 26px solid $bg-yellow;
+        border-top: 0;
+        top: -20px;
+        right: 62px;
+      }
+    }
+  }
+  /*---------- caption ----------*/
+  &__cap {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: $secondary-black;
+  }
+}
+
+/*-------------------------------
+c-priceCase
+-------------------------------*/
+.c-priceCase {
+  /*---------- case table ----------*/
+  &__table {
+    margin-top: 40px;
+    border: 3px solid #e0e0e0;
+    &--ttl {
+      @include mq() {
+        margin-top: 0;
+      }
+    }
+
+    .p-case__cap {
+      padding: 0;
+      p {
+        @include mq() {
+          margin: 0;
+          padding: 20px;
+        }
+        @include mq(medium, max) {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+  .p-case__table {
+    dt,
+    dd {
+      padding-left: 2rem;
+    }
+  }
+}
+
+/*-------------------------------
+c-optionPrice
+-------------------------------*/
+.c-optionPrice {
+  @include mq(small, max) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  &__table {
+    margin-top: 20px;
+    dl {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      border: 1px solid $table-line;
+      border-top: none;
+    }
+
+    dt,
+    dd {
+      @include mq() {
+        padding: 20px 5%;
+      }
+    }
+
+    dt {
+      background: $bg-table;
+      flex-basis: 50%;
+      padding: 10px;
+      box-sizing: border-box;
+      border-top: 1px solid $table-line;
+      text-align: center;
+      letter-spacing: 0.3px;
+      @include mq() {
+        @include bold;
+        font-size: 1.8rem;
+        padding: 20px 5%;
+      }
+      @include mq(medium, max) {
+        font-size: 1.6rem;
+      }
+    }
+
+    dd {
+      padding: 10px;
+      margin: 0;
+      border-left: 1px solid $table-line;
+      border-top: 1px solid $table-line;
+      flex-basis: 50%;
+      background: #fff;
+      box-sizing: border-box;
+      @include mq() {
+        text-align: right;
+      }
+    }
+
+    @include mq(small, max) {
+      dl {
+        flex-flow: column nowrap;
+      }
+
+      dt,
+      dd {
+        text-align: center;
+        width: 100%;
+      }
+
+      dd {
+        border-left: none;
+      }
+    }
+  }
+  &__other {
+    @include mq(medium, max) {
+      margin-top: 50px;
+    }
+  }
+}
+
+/*-------------------------------
+c-payment
+-------------------------------*/
+.c-payment {
+  @include mq {
+    margin-top: 80px;
+  }
+  @include mq(medium, max) {
+    margin-top: 50px;
+    p {
+      padding: 16px;
+    }
+  }
+  &__img {
+    display: flex;
+    background: $bg-light-gray;
+    justify-content: center;
+    @include mq() {
+      margin-top: 40px;
+      padding: 40px;
+    }
+
+    @include mq(medium, max) {
+      margin-top: 20px;
+      padding: 15px;
+      flex-direction: column;
+    }
+    .genkin {
+      @include mq() {
+        margin-right: 50px;
+      }
+    }
+    .credit {
+      @include mq(medium, max) {
+        margin-top: 15px;
+      }
+    }
+  }
+}
+
+// 修正
+.p-price_dl {
+  dt,
+  dd {
+    height: 70px;
+  }
+
+  dd {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}

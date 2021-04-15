@@ -1,0 +1,15 @@
+#slider_wrap { }
+#slider { }
+#slider img { display:none; }
+
+
+/* The Nivo Slider styles */
+.nivoSlider { position:relative; width:100%; height:auto; overflow:hidden; }
+.nivoSlider img { position:absolute; top:0px; left:0px; max-width:none; }
+.nivo-main-image { display: block !important; position: relative !important;  width: 100% !important; }
+
+
+/* The slices and boxes in the Slider */
+.nivo-slice { display:block; position:absolute; z-index:5; height:100%; top:0; }
+.nivo-box { display:block; position:absolute; z-index:5; overflow:hidden; }
+.nivo-box img { display:block; }

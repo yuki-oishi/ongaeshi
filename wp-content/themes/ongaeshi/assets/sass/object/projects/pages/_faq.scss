@@ -1,0 +1,52 @@
+.p-faq-list {
+    margin-top: 40px;
+    @include mq(medium, max) {
+        padding: 0 16px;
+    }
+    dt, dd {
+        display: flex;
+        &::before {
+            @include box;
+            @include noto;
+            width: 40px;
+            height: 40px;
+            color: $reverse-color;
+            text-align: center;
+            vertical-align: center;
+            border-radius: 4px;
+        }
+        p {
+            @include mq {
+                padding-left: 40px;
+            }
+            @include mq(medium, max) {
+                padding-left: 20px;
+            }
+        }
+    }
+    dt {
+        margin-top: 20px;
+        &::before {
+            background-color: $blue;
+            content: "Q";
+        }
+        p {
+            @include bold;
+        }
+    }
+    dd {
+        &::before {
+            background-color: $red;
+            content: "A";
+        }
+        border-bottom: 3px solid $color-gray;
+        padding-bottom: 20px;
+        margin-top: 32px;
+        @include mq(medium, max) {
+            margin-top: 16px;
+        }
+        p {
+            width: calc(100% - 40px);
+        }
+    }
+}

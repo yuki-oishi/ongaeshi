@@ -1,0 +1,379 @@
+// position
+.c-contens-flex {
+  display: flex;
+  @include mq(large, max) {
+    display: block;
+  }
+}
+
+.c-mt80 {
+  margin-top: 80px;
+  @include mq(medium, max) {
+    margin-top: 40px;
+  }
+}
+
+.c-mt40 {
+  margin-top: 40px;
+}
+
+.c-p15 {
+  @include mq(medium, max) {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+.c-mt80-50{
+	margin-top: 80px;
+	@include mq(medium, max) {
+	margin-top: 50px;
+	}
+}
+
+.c-cd {
+  clear: both;
+}
+// font
+.c-txt {
+  &_underline {
+    background: linear-gradient(transparent 55%, $under-line 0%);
+    @include bold;
+  }
+
+  &_red {
+    color: $red;
+  }
+  &_link {
+    color: $link-color;
+    text-decoration: underline;
+  }
+}
+
+// hedding
+.c-h2 {
+  @include notoserif;
+  font-size: 3.2rem;
+  color: $blue;
+  @include bold;
+  height: 70px;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("../images/common/ribbon@2x_pc.png") no-repeat;
+  background-size: contain;
+
+  @include mq(xlarge, max) {
+    font-size: 2.8rem;
+  }
+
+  @include mq(medium, max) {
+    background: url("../images/common/ribbon_sp@2x.png") no-repeat;
+    background-size: cover;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    height: 70px;
+    padding: 0 15px;
+  }
+
+  &_double {
+    @include notoserif;
+    font-size: 3.2rem;
+    color: $blue;
+    @include bold;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    background: url("../images/common/ribbon@2x_pc.png") no-repeat;
+    background-size: contain;
+
+    @include mq(xlarge, max) {
+      font-size: 2.8rem;
+      line-height: 60px;
+    }
+
+    @include mq(medium, max) {
+      background: url("../images/common/ribbon_sp@2x.png") no-repeat;
+      font-size: 2.5rem;
+      background-size: cover;
+      line-height: 1.8;
+      height: 100px;
+      font-size: 2.5rem;
+    }
+  }
+
+  &_pc-double {
+    @include notoserif;
+    font-size: 3.2rem;
+    color: $blue;
+    @include bold;
+    height: 110px;
+    word-break: break-all;
+    padding-left: 40px;
+    padding-right: 40px;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    background: url("../images/common/ribbon_l@2x_pc.png") no-repeat;
+    background-size: contain;
+
+    @include mq(xlarge, max) {
+      font-size: 2.8rem;
+    }
+
+    @include mq(medium, max) {
+      background: url("../images/common/ribbon_sp@2x.png") no-repeat;
+      font-size: 2.4rem;
+      background-size: cover;
+      height: 100px;
+    }
+  }
+}
+// 大きいリボン
+.c-h2_big {
+  position: relative;
+  width: 100%;
+  @include notoserif;
+  @include bold;
+  color: $blue;
+  text-align: center;
+  background-image: linear-gradient(
+    to bottom,
+    $yellow 0% 50%,
+    $dark-yellow 50% 100%
+  );
+  box-sizing: border-box;
+  @include mq() {
+    font-size: 3.2rem;
+    height: 116px;
+    padding: 0 30px;
+  }
+  @include mq(medium, max) {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    padding: 10px 15px;
+  }
+
+  @include mq() {
+    &:before,
+    &:after {
+      position: absolute;
+      content: "";
+      width: 0px;
+      height: 0px;
+      z-index: 1;
+    }
+    &:before {
+      top: 0;
+      left: 0;
+      border-width: 58px 0px 58px 30px;
+      border-color: transparent transparent transparent #fff;
+      border-style: solid;
+    }
+    &:after {
+      top: 0;
+      right: 0;
+      border-width: 58px 30px 58px 0px;
+      border-color: transparent #fff transparent transparent;
+      border-style: solid;
+    }
+  }
+}
+.c-h3 {
+  display: inline-block;
+  @include notoserif;
+  color: $blue;
+  @include bold;
+  text-align: center;
+  background-image: linear-gradient(
+    to bottom,
+    $yellow 0% 50%,
+    $dark-yellow 50% 100%
+  );
+  @include mq() {
+    height: 60px;
+    line-height: 60px;
+    width: 740px;
+    font-size: 2.5rem;
+  }
+}
+
+.c-gray-hedding {
+  position: relative;
+  width: 100%;
+  background: $bg-light-gray;
+  color: $blue;
+  padding: 8px 24px;
+  padding: 1.2rem 1rem 1rem 3rem;
+  @include notoserif;
+  @include bold;
+  @include mq() {
+    font-size: 3.2rem;
+  }
+
+  @include mq(medium, max) {
+    font-size: 2.4rem;
+    line-height: 1.2;
+  }
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: $blue;
+    left: 1rem;
+    width: 0.8rem;
+    height: 80%;
+    height: calc(100% - 2rem);
+  }
+}
+
+// cat
+.c-cat {
+  width: 100px;
+  height: 23px;
+  display: inline-block;
+  color: #fff;
+  line-height: 23px;
+  text-align: center;
+  font-size: 1.2rem;
+
+  &_01 {
+    background-color: $cat-01;
+  }
+
+  &_02 {
+    background-color: $cat-02;
+  }
+  &_03 {
+    background-color: $cat-03;
+  }
+}
+
+//  btn
+.c-btn {
+  &_yellow {
+    position: relative;
+    display: block;
+    width: 300px;
+    height: 60px;
+    background-color: $yellow;
+    border: 2px solid $dark-yellow;
+    border-radius: 20px;
+    color: $btn-color;
+    font-size: 2rem;
+    line-height: 60px;
+    text-align: center;
+    margin: 0 auto;
+    @include notoserif;
+    @include bold;
+    @include box-shadow;
+
+    // arrow-icon
+    &:after {
+      position: absolute;
+      content: "chevron_right";
+      font-family: "Material Icons";
+      @include centering(y);
+      vertical-align: text-bottom;
+      right: 10px;
+      font-size: 2.4rem;
+    }
+  }
+}
+
+.c-page-top {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 150px;
+  right: 50px;
+  background-color: $blue;
+  @include bold;
+  text-align: center;
+  line-height: 1.3;
+  padding: 5px;
+  font-size: 1.8rem;
+
+  @include mq(medium, max) {
+    width: 30px;
+    height: 30px;
+    right: 10px;
+    bottom: 75px;
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    border-right: 14px solid transparent;
+    border-bottom: 22px solid #fff;
+    border-left: 14px solid transparent;
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @include mq(medium, max) {
+      border-right: 8px solid transparent;
+      border-bottom: 14px solid #fff;
+      border-left: 8px solid transparent;
+    }
+  }
+}
+// チェックリスト
+.c-checkList {
+  position: relative;
+  @include mq() {
+    padding-left: 60px;
+  }
+  @include mq(medium, max) {
+    padding-left: 50px;
+  }
+  li {
+    position: relative;
+    @include mq() {
+      padding-top: 15px;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      left: -44px;
+      width: 30px;
+      height: 30px;
+      display: inline-block;
+      background-image: url("../images/common/check.png");
+      background-size: cover;
+    }
+  }
+}
+// タグ
+.c-tag {
+  display: inline-block;
+  color: #fff;
+  @include bold;
+  font-size: 1.2rem;
+  @include noto;
+  &_red {
+    background: $red;
+    @include mq() {
+      padding: 2px 10px;
+    }
+    @include mq(medium, max) {
+      padding: 2px 5px;
+    }
+  }
+  &_blue {
+    background: $blue;
+  }
+}
+.c-tell {
+  @include mq {
+    pointer-events: none;
+  }
+}
