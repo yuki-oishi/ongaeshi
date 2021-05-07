@@ -2471,3 +2471,17 @@ h4.blue_header span {
     padding-top: 2em;
   }
 }
+
+/* コラム table用追加 21/4/27*/
+table .va-top {
+  vertical-align: top!important;
+}
+
+table .w50 {
+  width: 50%;
+}
+
+ul.disc li {
+  list-style: disc;
+  margin: 0 0 .5rem 2rem;
+}
